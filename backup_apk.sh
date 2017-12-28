@@ -8,10 +8,5 @@ do
  path=`adb shell pm path $temp|awk -F ':' '{print $2}'`
  apkName=`echo $path |awk -F '/' '{print $4}'`".apk" 
  `adb pull $path  $apkName`
- echo $apkName
- #echo $temp
- #echo $path
- #mv base.apk $apkName`
- #echo $temp
- #break
+ echo "apk $apkName Copied to the System"
 done
